@@ -11,11 +11,9 @@
       </p>
     </div>
     <div class="mini-card-grid">
-      <app-article-card></app-article-card>
-      <app-article-card></app-article-card>
-      <app-article-card></app-article-card>
-      <app-article-card></app-article-card>
-      <app-article-card></app-article-card>
+      <app-article-card *ngFor="let item of list; let isfirst= first;"
+        [isShadow]="!isfirst"
+        ></app-article-card>
     </div>
   </section>
 </div>
