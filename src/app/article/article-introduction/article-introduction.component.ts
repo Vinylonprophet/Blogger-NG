@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-article-introduction',
@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./article-introduction.component.scss']
 })
 export class ArticleIntroductionComponent {
+  @Input('isHomePage') isHomePage: Boolean = false;
 
-  Article = [
+  article = [
     {
       id: 0,
       img: 'https://css-tricks.com/wp-content/uploads/2023/02/gradient-shadows.png',

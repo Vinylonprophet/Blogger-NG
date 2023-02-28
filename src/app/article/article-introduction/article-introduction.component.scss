@@ -9,7 +9,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 3rem;
-    margin: 0 0 3rem 0;
 
     & .article-card {
       background: #fff;
@@ -111,6 +110,7 @@
 
   & .button {
     width: 100%;
+    margin-top: 3rem;
     font-style: normal;
     background-color: #5e5e5e !important;
     border: 0;

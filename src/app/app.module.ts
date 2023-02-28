@@ -8,6 +8,7 @@ import { ArticleSelectComponent } from './article/article-select/article-select.
 import { HomeIndexComponent } from './home/home-index/home-index.component';
 import { ArticleCardComponent } from './article/article-select/article-card/article-card.component';
 import { ArticleIntroductionComponent } from './article/article-introduction/article-introduction.component';
+import { FooterBarComponent } from './bar/footer-bar/footer-bar.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ArticleIntroductionComponent } from './article/article-introduction/art
     ArticleSelectComponent,
     ArticleCardComponent,
     HomeIndexComponent,
-    ArticleIntroductionComponent
+    ArticleIntroductionComponent,
+    FooterBarComponent
   ],
   imports: [
     BrowserModule,

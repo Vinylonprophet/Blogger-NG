@@ -1,7 +1,7 @@
 <div class="articles-and-sidebar">
   <div>
     <div class="article-grid">
-      <article class="article-card" *ngFor="let item of Article">
+      <article class="article-card" *ngFor="let item of article">
         <div class="article-thumbnail-wrap">
           <img width="1200" height="600" [src]="item?.img" class="article-thumbnail">
         </div>
@@ -23,10 +23,10 @@
         </div>
       </article>
     </div>
-    <button class="button">Keep browse more articles</button>
+    <button class="button" *ngIf=this.isHomePage>Keep browse more articles</button>
   </div>
   <div class="all-links">
-    <div class="single-links" *ngFor="let item of Article">
+    <div class="single-links" *ngFor="let item of article">
       <div class="links">
         <img src="https://css-tricks.com/wp-content/uploads/2022/10/SimplerCloudHappierDevsRight.jpg" alt="link">
       </div>
