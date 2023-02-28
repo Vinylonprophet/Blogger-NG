@@ -9,6 +9,7 @@ import { HomeIndexComponent } from './home/home-index/home-index.component';
 import { ArticleCardComponent } from './article/article-select/article-card/article-card.component';
 import { ArticleIntroductionComponent } from './article/article-introduction/article-introduction.component';
 import { FooterBarComponent } from './bar/footer-bar/footer-bar.component';
+import { ArticleComponent } from './article/article.component';
 
 
 @NgModule({
@@ -19,14 +20,15 @@ import { FooterBarComponent } from './bar/footer-bar/footer-bar.component';
     ArticleCardComponent,
     HomeIndexComponent,
     ArticleIntroductionComponent,
-    FooterBarComponent
+    FooterBarComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
       { path: 'home', component: HomeIndexComponent },
-      { path: 'article-select', component: ArticleSelectComponent },
+      { path: 'article', component: ArticleComponent },
       { path: '', redirectTo: '/home', pathMatch: 'full' },
     ]),
   ],

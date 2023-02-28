@@ -1,13 +1,14 @@
 .footer-bar {
   width: 100%;
   height: auto;
-  padding: 2rem 2.5rem;
+  padding: 2.5rem;
   align-items: center;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 2rem;
   align-items: flex-start;
+  background: linear-gradient(-45deg, black, rgb(40, 40, 40));
 
   // background: linear-gradient(to right, black, rgb(107, 114, 128, 1));
   & .author {
