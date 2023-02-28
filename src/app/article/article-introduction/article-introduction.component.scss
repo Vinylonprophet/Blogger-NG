@@ -1,0 +1,186 @@
+.articles-and-sidebar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 3rem;
+  margin: 0 auto;
+  padding-top: 3rem;
+
+  & .article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3rem;
+    margin: 0 0 3rem 0;
+
+    & .article-card {
+      background: #fff;
+      color: #474747;
+      border-radius: 8px;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      -webkit-filter: drop-shadow(0 5px 15px rgba(0, 0, 0, .24));
+      filter: drop-shadow(0 5px 15px rgba(0, 0, 0, .24));
+      display: flex;
+      flex-direction: column;
+
+      & .article-thumbnail-wrap {
+        position: relative;
+
+        & img {
+          max-width: 100%;
+        }
+
+        & img.article-thumbnail {
+          height: 250px;
+          -o-object-fit: cover;
+          object-fit: cover;
+          width: 100%;
+          display: block;
+        }
+      }
+
+      & .article-article {
+        flex: 1;
+        position: relative;
+        z-index: 5;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+
+        & .tags {
+          line-height: 1;
+          margin: 0 0 0.5rem;
+
+          & a {
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ff7a18;
+            font-size: 0.66rem;
+            -webkit-margin-end: 0.66rem;
+            margin-inline-end: 0.66rem;
+          }
+        }
+
+        h2 {
+          margin: 0.5rem 0 0.5rem 0;
+          color: black;
+        }
+
+        & .card-content {
+          color: #474747;
+          font-weight: 400;
+        }
+
+        & .author {
+          height: auto;
+          display: flex;
+          align-items: center;
+          margin-top: 1rem;
+
+          & .avatar {
+            width: 2.5rem;
+            height: 2.5rem;
+
+            & img {
+              height: 100%;
+              width: 100%;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+              border-radius: 100%;
+            }
+          }
+
+          & .name {
+            margin-left: 1rem;
+            font-size: 1rem;
+            line-height: 1.25rem;
+            font-weight: 600;
+          }
+
+          & .date {
+            margin-left: 1rem;
+            color: rgb(156, 163, 175);
+            font-weight: 300;
+          }
+        }
+      }
+    }
+
+  }
+
+  & .button {
+    width: 100%;
+    font-style: normal;
+    background-color: #5e5e5e !important;
+    border: 0;
+    color: #fff !important;
+    border-bottom: 1px solid #262626;
+    border-right: 1px solid #262626;
+    box-shadow: inset 1px 1px 0 #777, 0 2px 3px rgb(0 0 0 / 40%);
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    border-radius: 4px !important;
+    padding: 1rem 1.5rem;
+    position: relative;
+  }
+
+  & .all-links {
+    height: 100%;
+
+    & .single-links {
+      box-sizing: border-box;
+      width: 300px;
+      padding: .5rem;
+      margin: 0 0 3rem 0;
+      position: relative;
+      border-radius: 8px;
+      background-color: white;
+
+      & .links {
+        width: 100%;
+        height: 100%;
+
+        & img {
+          box-shadow: 0 0 0.5rem rgb(17 17 17 / 50%);
+          transition: transform 0.15s;
+          transition-timing-function: ease;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+
+      & .module {
+        clear: both;
+      }
+
+      & .interlude {
+        color: #474747;
+        font-size: .75rem;
+        font-weight: 400;
+        padding: 1rem;
+        white-space: normal;
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media (max-height: 700px) {
+  .article-thumbnail {
+    height: 150px;
+    width: 100%;
+  }
+}
+
+.links>img:hover {
+  // transform: rotate(-3deg);
+  opacity: 0.85;
+  transform: translate(-.5rem, -1rem) rotate(-5deg);
+  // transform-origin: 0% 100%;
+}

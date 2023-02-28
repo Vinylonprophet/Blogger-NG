@@ -62,7 +62,8 @@
 }
 
 .mini-card:hover {
-  transform: rotate(3.7deg);
-  /* transform: translate(-.5rem,-1rem) rotate(5deg); */
+  margin-right: 25px;
+  transform: translate(-.2rem, -.5rem) rotate(3deg);
+  transition: .2s;
   transform-origin: 100% 0%;
 }
