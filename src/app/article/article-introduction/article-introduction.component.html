@@ -24,9 +24,10 @@
       </article>
     </div>
     <button class="button" *ngIf=this.isHomePage>Keep browse more articles</button>
+    <app-paginator class="paginator" [article]="this?.article" *ngIf=!this.isHomePage></app-paginator>
   </div>
   <div class="all-links">
-    <div class="single-links" *ngFor="let item of article">
+    <div class="single-links" *ngFor="let item of shortArticle">
       <div class="links">
         <img src="https://css-tricks.com/wp-content/uploads/2022/10/SimplerCloudHappierDevsRight.jpg" alt="link">
       </div>

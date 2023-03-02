@@ -10,7 +10,9 @@ import { ArticleCardComponent } from './article/article-select/article-card/arti
 import { ArticleIntroductionComponent } from './article/article-introduction/article-introduction.component';
 import { FooterBarComponent } from './bar/footer-bar/footer-bar.component';
 import { ArticleComponent } from './article/article.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PaginatorComponent } from './component/paginator/paginator.component';
+import { PageDisplayPipe } from './pipe/page/page-display.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ArticleComponent } from './article/article.component';
     HomeIndexComponent,
     ArticleIntroductionComponent,
     FooterBarComponent,
-    ArticleComponent
+    ArticleComponent,
+    PaginatorComponent,
+    PageDisplayPipe
   ],
   imports: [
     BrowserModule,
@@ -31,6 +35,7 @@ import { ArticleComponent } from './article/article.component';
       { path: 'article', component: ArticleComponent },
       { path: '', redirectTo: '/home', pathMatch: 'full' },
     ]),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

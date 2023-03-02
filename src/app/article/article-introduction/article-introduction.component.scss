@@ -127,6 +127,16 @@
     position: relative;
   }
 
+  & .paginator {
+    width: auto;
+    margin: 3rem auto 0 auto;
+    display: block;
+    font-weight: 700;
+    text-decoration: none !important;
+    border-radius: 4px !important;
+    position: relative;
+  }
+
   & .all-links {
     height: 100%;
 
