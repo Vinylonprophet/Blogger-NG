@@ -28,6 +28,10 @@ ul {
   & .active-page {
     color: white;
   }
+
+  & .unactive-page {
+    pointer-events: none;
+  }
 }
 
 .breadcrumbs-prev-page {

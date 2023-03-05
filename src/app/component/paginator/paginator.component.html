@@ -10,7 +10,7 @@
         </div>
       </li>
       <li class="list-number" (click)="toPage($event)" *ngFor="let item of pageArray; let i = index;"
-        [ngClass]="this?.currentPage === item ? 'active-page' : ''"
+        [ngClass]="{'active-page': this?.currentPage === item, 'unactive-page': item === '...'}"
         >
         {{item | pageDisplay}}
       </li>
