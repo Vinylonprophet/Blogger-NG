@@ -13,6 +13,7 @@ import { ArticleComponent } from './article/article.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaginatorComponent } from './component/paginator/paginator.component';
 import { PageDisplayPipe } from './pipe/page/page-display.pipe';
+import { ArticleClassifyComponent } from './article/article-classify/article-classify.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PageDisplayPipe } from './pipe/page/page-display.pipe';
     FooterBarComponent,
     ArticleComponent,
     PaginatorComponent,
-    PageDisplayPipe
+    PageDisplayPipe,
+    ArticleClassifyComponent
   ],
   imports: [
     BrowserModule,
