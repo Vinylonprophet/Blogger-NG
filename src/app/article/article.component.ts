@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MdToHtmlService } from '../service/md-to-html.service';
 
 @Component({
   selector: 'app-article',
@@ -7,7 +6,4 @@ import { MdToHtmlService } from '../service/md-to-html.service';
   styleUrls: ['./article.component.scss']
 })
 export class ArticleComponent {
-  constructor(private MdToHtmlService: MdToHtmlService) {
-  }
-  article = this.MdToHtmlService.toHTML();
 }

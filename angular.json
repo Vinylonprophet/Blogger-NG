@@ -30,9 +30,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/app.scss"
+              "src/styles/app.scss",
+              "/node_modules/prismjs/themes/prism-okaidia.css"
             ],
-            "scripts": []
+            "scripts": [
+              "/node_modules/marked/lib/marked.min.js",
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-csharp.min.js",
+              "node_modules/prismjs/components/prism-css.min.js"
+            ]
           },
           "configurations": {
             "production": {

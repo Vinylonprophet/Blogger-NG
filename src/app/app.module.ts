@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaginatorComponent } from './component/paginator/paginator.component';
 import { PageDisplayPipe } from './pipe/page/page-display.pipe';
 import { ArticleClassifyComponent } from './article/article-classify/article-classify.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { ArticleClassifyComponent } from './article/article-classify/article-cla
       { path: 'article', component: ArticleComponent },
       { path: '', redirectTo: '/home', pathMatch: 'full' },
     ]),
+    MarkdownModule.forRoot(),
     BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
