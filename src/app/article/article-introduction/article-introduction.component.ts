@@ -25,7 +25,7 @@ export class ArticleIntroductionComponent implements OnInit {
       title: 'Different Ways to Get CSS Gradient Shadows',
       abstract: 'It\'s a question I hear asked quite often: Is it possible to create shadows from gradients instead of solid colors? There is no specific CSS property that does this (believe me, I\'ve looked) and any blog post you find about …',
       author: {
-        name: 'Vinylon Prophet',
+        name: 'Vinylon',
         date: 'on Feb 10, 2023'
       }
     },
@@ -40,7 +40,7 @@ export class ArticleIntroductionComponent implements OnInit {
       title: 'Different Ways to Get CSS Gradient Shadows',
       abstract: 'It\'s a question I hear asked quite often: Is it possible to create shadows from gradients instead of solid colors? There is no specific CSS property that does this (believe me, I\'ve looked) and any blog post you find about …',
       author: {
-        name: 'Vinylon Prophet',
+        name: 'Vinylon',
         date: 'on Feb 10, 2023'
       }
     },
@@ -55,7 +55,7 @@ export class ArticleIntroductionComponent implements OnInit {
       title: 'Different Ways to Get CSS Gradient Shadows',
       abstract: 'It\'s a question I hear asked quite often: Is it possible to create shadows from gradients instead of solid colors? There is no specific CSS property that does this (believe me, I\'ve looked) and any blog post you find about …',
       author: {
-        name: 'Vinylon Prophet',
+        name: 'Vinylon',
         date: 'on Feb 10, 2023'
       }
     },
@@ -70,7 +70,7 @@ export class ArticleIntroductionComponent implements OnInit {
       title: 'Different Ways to Get CSS Gradient Shadows',
       abstract: 'It\'s a question I hear asked quite often: Is it possible to create shadows from gradients instead of solid colors? There is no specific CSS property that does this (believe me, I\'ve looked) and any blog post you find about …',
       author: {
-        name: 'Vinylon Prophet',
+        name: 'Vinylon',
         date: 'on Feb 10, 2023'
       }
     },
@@ -85,7 +85,7 @@ export class ArticleIntroductionComponent implements OnInit {
       title: 'Different Ways to Get CSS Gradient Shadows',
       abstract: 'It\'s a question I hear asked quite often: Is it possible to create shadows from gradients instead of solid colors? There is no specific CSS property that does this (believe me, I\'ve looked) and any blog post you find about …',
       author: {
-        name: 'Vinylon Prophet',
+        name: 'Vinylon',
         date: 'on Feb 10, 2023'
       }
     },
@@ -100,7 +100,7 @@ export class ArticleIntroductionComponent implements OnInit {
       title: 'Different Ways to Get CSS Gradient Shadows',
       abstract: 'It\'s a question I hear asked quite often: Is it possible to create shadows from gradients instead of solid colors? There is no specific CSS property that does this (believe me, I\'ve looked) and any blog post you find about …',
       author: {
-        name: 'Vinylon Prophet',
+        name: 'Vinylon',
         date: 'on Feb 10, 2023'
       }
     },
@@ -115,7 +115,7 @@ export class ArticleIntroductionComponent implements OnInit {
       title: 'Different Ways to Get CSS Gradient Shadows',
       abstract: 'It\'s a question I hear asked quite often: Is it possible to create shadows from gradients instead of solid colors? There is no specific CSS property that does this (believe me, I\'ve looked) and any blog post you find about …',
       author: {
-        name: 'Vinylon Prophet',
+        name: 'Vinylon',
         date: 'on Feb 10, 2023'
       }
     }

@@ -16,6 +16,8 @@ import { PaginatorComponent } from './component/paginator/paginator.component';
 import { PageDisplayPipe } from './pipe/page/page-display.pipe';
 import { ArticleClassifyComponent } from './article/article-classify/article-classify.component';
 import { MarkdownModule } from 'ngx-markdown';
+import { ArticleDetailComponent } from './article/article-detail/article-detail.component';
+import { ArticleLinksComponent } from './article/article-links/article-links.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { MarkdownModule } from 'ngx-markdown';
     ArticleComponent,
     PaginatorComponent,
     PageDisplayPipe,
-    ArticleClassifyComponent
+    ArticleClassifyComponent,
+    ArticleDetailComponent,
+    ArticleLinksComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,7 @@ import { MarkdownModule } from 'ngx-markdown';
     RouterModule.forRoot([
       { path: 'home', component: HomeIndexComponent },
       { path: 'article', component: ArticleComponent },
+      { path: 'detail', component: ArticleDetailComponent },
       { path: '', redirectTo: '/home', pathMatch: 'full' },
     ]),
     MarkdownModule.forRoot(),

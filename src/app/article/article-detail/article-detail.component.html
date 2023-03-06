@@ -1,0 +1,25 @@
+<div class="markdown-wrap">
+  <div class="markdown-grid">
+    <div>
+      <div class="markdown-header">
+        <div>
+          <div class="markdown-label" *ngFor="let item of article?.tags">{{item}}</div>
+        </div>
+        <div class="markdown-title">You-Dont-Know-JS-作用域</div>
+        <div class="author">
+          <div class="avatar">
+            <img alt="avatar" [src]="article?.author?.avatar" alt="avatar">
+          </div>
+          <div style="display: flex;">
+            <div class="name">{{article?.author?.name}}</div>
+            <div class="date">{{"on " + article?.author?.date}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="markdown-content">
+        <markdown [src]="markdown"></markdown>
+      </div>
+    </div>
+    <app-article-links></app-article-links>
+  </div>
+</div>
