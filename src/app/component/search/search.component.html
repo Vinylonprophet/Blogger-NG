@@ -14,24 +14,30 @@
       </button>
     </div>
     <div class="popup-main">
-      <div class="content"></div>
-      <div class="filter">
-        <div style="margin-top: 1rem;">
-          <div>
-            <h2>Filter Options</h2>
-          </div>
-          <div style="margin-top: 1rem;" *ngFor="let item of filterOption">
-            <h3>{{item?.classify}}</h3>
-            <div class="option" *ngFor="let option of item?.options">
-              <input type="checkbox">
-              <label for="">{{option}}&nbsp;({{72}})</label>
+      <div style="display: flex;">
+        <div class="content"></div>
+        <div class="filter">
+          <div style="margin-top: 1rem;">
+            <div>
+              <h2>Filter Options</h2>
+            </div>
+            <div style="margin-top: 1rem;" *ngFor="let item of filterOption">
+              <h3>{{item?.classify}}</h3>
+              <div class="option" *ngFor="let option of item?.options">
+                <input type="checkbox">
+                <label for="">{{option}}&nbsp;({{72}})</label>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="poptp-footer">
 
+    </div>
+    <div class="popup-footer">
+      <div class="avatar">
+        <img src="assets/icons/avatar.jpg" alt="avatar" style="border-radius: 100%;">
+      </div>
+      <span style="margin-left: 1rem; color: white; font-size: 16px;">Vinylon's&nbsp;Blog</span>
     </div>
   </div>
 </div>

@@ -13,7 +13,7 @@
     height: 100%;
     max-width: 1080px;
     margin: 0 auto;
-    overflow-y: auto;
+    // overflow-y: auto;
 
     & .popup-header {
       height: 4rem;
@@ -68,8 +68,8 @@
 
     & .popup-main {
       width: 100%;
-      min-height: calc(100% - 4rem);
-      display: flex;
+      height: calc(100% - 7rem);
+      overflow-y: auto;
 
       & .content {
         // background-color: skyblue;
@@ -78,7 +78,6 @@
 
       & .filter {
         width: 320px;
-        min-height: 100%;
         padding: 0 3rem 1rem 3rem;
         border-left: .5px solid #cdcdcd;
 
@@ -88,6 +87,21 @@
           align-items: center;
           margin: 0.88rem 0;
         }
+      }
+    }
+
+    & .popup-footer {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: .5px solid #cdcdcd;
+      height: 3rem;
+      width: 100%;
+
+      & .avatar {
+        height: 1.5rem;
+        width: 1.5rem;
       }
     }
   }

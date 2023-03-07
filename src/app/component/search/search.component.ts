@@ -18,38 +18,38 @@ export class SearchComponent {
         'Chapter'
       ]
     },
-    // {
-    //   classify: 'Post Type',
-    //   options: [
-    //     'Post',
-    //     'Page',
-    //     'Chapter'
-    //   ]
-    // },
-    // {
-    //   classify: 'Post Type',
-    //   options: [
-    //     'Post',
-    //     'Page',
-    //     'Chapter'
-    //   ]
-    // },
-    // {
-    //   classify: 'Post Type',
-    //   options: [
-    //     'Post',
-    //     'Page',
-    //     'Chapter'
-    //   ]
-    // },
-    // {
-    //   classify: 'Post Type',
-    //   options: [
-    //     'Post',
-    //     'Page',
-    //     'Chapter'
-    //   ]
-    // },
+    {
+      classify: 'Post Type',
+      options: [
+        'Post',
+        'Page',
+        'Chapter'
+      ]
+    },
+    {
+      classify: 'Post Type',
+      options: [
+        'Post',
+        'Page',
+        'Chapter'
+      ]
+    },
+    {
+      classify: 'Post Type',
+      options: [
+        'Post',
+        'Page',
+        'Chapter'
+      ]
+    },
+    {
+      classify: 'Post Type',
+      options: [
+        'Post',
+        'Page',
+        'Chapter'
+      ]
+    },
     {
       classify: 'Categories',
       options: [
