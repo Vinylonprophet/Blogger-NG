@@ -14,7 +14,8 @@
     </li>
     <li class="classify-main">Lists</li>
   </ul>
-  <div class="stie-search">
+  <div class="stie-search" (click)="this.isPopup = true">
     <img src="../../../assets/icons/search.svg" class="h-2/3 w-2/3 bg-cover bg-no-repeat bg-center" alt="search">
   </div>
 </div>
+<app-search [isPopup]="this.isPopup" (closePopup)="onChange($event)"></app-search>

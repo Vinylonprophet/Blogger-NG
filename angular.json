@@ -31,10 +31,10 @@
             ],
             "styles": [
               "src/styles/app.scss",
-              "/node_modules/prismjs/themes/prism-okaidia.css"
+              "node_modules/prismjs/themes/prism-okaidia.css"
             ],
             "scripts": [
-              "/node_modules/marked/lib/marked.min.js",
+              "node_modules/marked/marked.min.js",
               "node_modules/prismjs/prism.js",
               "node_modules/prismjs/components/prism-csharp.min.js",
               "node_modules/prismjs/components/prism-css.min.js"

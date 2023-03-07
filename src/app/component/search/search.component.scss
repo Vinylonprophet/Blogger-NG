@@ -1,0 +1,99 @@
+.popup-bg {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 888;
+  background-color: rgba(29, 35, 39, .7);
+  top: 0;
+  left: 0;
+
+  & .popup-window {
+    background-color: black;
+    height: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+
+    & .popup-header {
+      height: 4rem;
+      display: flex;
+      border-bottom: .5px solid #cdcdcd;
+
+      & .search {
+        height: 100%;
+        // background-color: skyblue;
+        flex-grow: 1;
+        padding: 1rem 0 1rem 1rem;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        display: flex;
+
+        & .search-icon {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+
+        & .search-input {
+          letter-spacing: 0.5px;
+          margin: 0 2rem 0 1.5rem;
+          border: none;
+          width: auto;
+          height: 2rem;
+          flex-grow: 1;
+          font-size: 16px;
+          line-height: 3rem;
+          background-color: transparent;
+          color: #cdcdcd;
+        }
+
+        & .search-input:focus-visible {
+          outline: none;
+          color: white;
+        }
+      }
+
+      & .button {
+        width: 4rem;
+        height: 4rem;
+        padding: 1.5rem;
+        border: none;
+        border-left: .5px solid #cdcdcd;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (min-width: 996px) {
+  .popup-window {
+    max-width: 95% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .popup-bg {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .popup-bg {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .popup-bg {
+    padding: 0;
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

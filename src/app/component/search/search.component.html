@@ -1,0 +1,16 @@
+<div class="popup-bg" *ngIf="isPopup">
+  <div class="popup-window">
+    <div class="popup-header">
+      <form action="" class="search">
+        <div class="search-icon">
+          <img src="assets/icons/search-gray.svg" alt="">
+        </div>
+        <input type="text" class="search-input" placeholder="Search ...">
+      </form>
+      <button class="button" (click)="closePop()">
+        <div style="width: 1rem; height: 1rem;">
+          <img src="assets/icons/delete.svg" alt="">
+        </div>
+      </button>
+  </div>
+</div>

@@ -18,6 +18,7 @@ import { ArticleClassifyComponent } from './article/article-classify/article-cla
 import { MarkdownModule } from 'ngx-markdown';
 import { ArticleDetailComponent } from './article/article-detail/article-detail.component';
 import { ArticleLinksComponent } from './article/article-links/article-links.component';
+import { SearchComponent } from './component/search/search.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ArticleLinksComponent } from './article/article-links/article-links.com
     PageDisplayPipe,
     ArticleClassifyComponent,
     ArticleDetailComponent,
-    ArticleLinksComponent
+    ArticleLinksComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
