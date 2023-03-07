@@ -12,5 +12,26 @@
           <img src="assets/icons/delete.svg" alt="">
         </div>
       </button>
+    </div>
+    <div class="popup-main">
+      <div class="content"></div>
+      <div class="filter">
+        <div style="margin-top: 1rem;">
+          <div>
+            <h2>Filter Options</h2>
+          </div>
+          <div style="margin-top: 1rem;" *ngFor="let item of filterOption">
+            <h3>{{item?.classify}}</h3>
+            <div class="option" *ngFor="let option of item?.options">
+              <input type="checkbox">
+              <label for="">{{option}}&nbsp;({{72}})</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="poptp-footer">
+
+    </div>
   </div>
 </div>
