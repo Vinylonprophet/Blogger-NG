@@ -74,6 +74,35 @@
       & .content {
         // background-color: skyblue;
         flex-grow: 1;
+        padding: 0 3rem 1rem 3rem;
+
+        & .result {
+          display: flex;
+          margin-top: 1.5rem;
+
+          & .article-des {
+            flex: 1;
+
+            & .title {
+              color: white;
+              font-size: 24px;
+              font-weight: 600;
+            }
+
+            & .details {
+              margin-top: 1rem;
+              font-size: 12px;
+              color: #cdcdcd;
+            }
+          }
+
+          & .article-img {
+            width: 128px;
+            height: 128px;
+            margin-left: 1rem;
+            background-color: orange;
+          }
+        }
       }
 
       & .filter {
@@ -136,6 +165,14 @@
   .popup-bg {
     padding: 0;
   }
+
+  .result {
+    flex-direction: column;
+
+    & .article-img {
+      margin: 1rem 0 0 0 !important;
+    }
+  }
 }
 
 img {
@@ -148,18 +185,19 @@ img {
 
 h2 {
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
 }
 
 h3 {
   color: #cdcdcd;
-  font-size: 16px;
+  font-size: 14px;
   margin: 0;
 }
 
 label {
   color: white;
+  font-size: 14px;
   margin-left: 12px;
   font-weight: 400;
 }

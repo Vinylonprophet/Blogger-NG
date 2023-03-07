@@ -15,7 +15,24 @@
     </div>
     <div class="popup-main">
       <div style="display: flex;">
-        <div class="content"></div>
+        <div class="content">
+          <div style="margin-top: 1rem;">
+            <div>
+              <h2>Showing popular results</h2>
+            </div>
+            <div class="result" *ngFor="let item of filterOption">
+              <div class="article-des">
+                <div class="title">
+                  <span>Different Ways to Get CSS Gradient Shadows</span>
+                </div>
+                <div class="details">
+                  <span>It's a question I hear asked quite often: Is it possible to create shadows from gradients ...</span>
+                </div>
+              </div>
+              <div class="article-img"></div>
+            </div>
+          </div>
+        </div>
         <div class="filter">
           <div style="margin-top: 1rem;">
             <div>
