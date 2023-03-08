@@ -27,6 +27,5 @@ export class ArticleCardComponent implements OnInit {
   ]
 
   ngOnInit(): void {
-    console.log("isShadow: " + this.isShadow);
   }
 }

@@ -29,6 +29,5 @@ export class ArticleSelectComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(this.isShadow)
   }
 }

@@ -2,7 +2,7 @@
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   z-index: 888;
   background-color: rgba(29, 35, 39, .7);
   top: 0;
@@ -72,7 +72,6 @@
       overflow-y: auto;
 
       & .content {
-        // background-color: skyblue;
         flex-grow: 1;
         padding: 0 3rem 1rem 3rem;
 
@@ -100,8 +99,26 @@
             width: 128px;
             height: 128px;
             margin-left: 1rem;
-            background-color: orange;
           }
+        }
+
+        & .load-bg {
+          margin: 2rem 0;
+          background-color: gray;
+          display: inline-block;
+          border-radius: 5px;
+          padding: 0.25rem 0.35rem;
+          cursor: pointer;
+
+          & .load-btn {
+            color: white;
+            display: inline-block;
+            font-size: 14px;
+          }
+        }
+
+        & .load-bg:hover {
+          opacity: 0.75;
         }
       }
 

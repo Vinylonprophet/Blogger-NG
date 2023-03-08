@@ -5,7 +5,7 @@
         <div class="search-icon">
           <img src="assets/icons/search-gray.svg" alt="">
         </div>
-        <input type="text" class="search-input" placeholder="Search ...">
+        <input type="text" id="search" class="search-input" placeholder="Search ..." #search>
       </form>
       <button class="button" (click)="closePop()">
         <div style="width: 1rem; height: 1rem;">
@@ -29,8 +29,13 @@
                   <span>It's a question I hear asked quite often: Is it possible to create shadows from gradients ...</span>
                 </div>
               </div>
-              <div class="article-img"></div>
+              <div class="article-img">
+                <img src="https://i2.wp.com/css-tricks.com/wp-content/uploads/2018/09/react-recompose-hand.png?resize=600%2C600" alt="">
+              </div>
             </div>
+          </div>
+          <div class="load-bg">
+            <div class="load-btn">Load More</div>
           </div>
         </div>
         <div class="filter">
