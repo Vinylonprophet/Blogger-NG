@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {
-  isPopup: boolean = true;
+  isPopup: boolean = false;
 
   onChange(close: boolean) {
     this.isPopup = close;
