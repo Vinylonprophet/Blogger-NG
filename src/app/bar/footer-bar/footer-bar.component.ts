@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FooterService } from 'src/app/service/footer.service';
+import { BarService } from 'src/app/service/bar.service';
 
 @Component({
   selector: 'app-footer-bar',
@@ -9,10 +9,10 @@ import { FooterService } from 'src/app/service/footer.service';
 export class FooterBarComponent implements OnInit {
   footerContent: any = []
 
-  constructor(private footerService: FooterService) { }
+  constructor(private barService: BarService) { }
 
   ngOnInit(): void {
-    this.footerService.getFooterContent().subscribe(content => {
+    this.barService.getFooterContent().subscribe(content => {
       this.footerContent = content;
     });
   }
