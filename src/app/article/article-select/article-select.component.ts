@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PopularArticle } from 'src/app/types/popular.type';
+import { ArticleService } from 'src/app/service/article.service';
 
 @Component({
   selector: 'app-article-select',
@@ -9,25 +11,13 @@ export class ArticleSelectComponent implements OnInit {
 
   isShadow: Boolean = false;
 
-  list = [
-    {
-      id: 0
-    },
-    {
-      id: 1
-    },
-    {
-      id: 2
-    },
-    {
-      id: 3
-    },
-    {
-      id: 4
-    }
-  ]
+  popularArticles: any = []
 
+  constructor(private articleService: ArticleService) { }
 
   ngOnInit(): void {
+    this.articleService.getPopularArticle().subscribe(article => {
+      this.popularArticles = article;
+    });
   }
 }

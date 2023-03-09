@@ -19,6 +19,7 @@ import { MarkdownModule } from 'ngx-markdown';
 import { ArticleDetailComponent } from './article/article-detail/article-detail.component';
 import { ArticleLinksComponent } from './article/article-links/article-links.component';
 import { SearchComponent } from './component/search/search.component';
+import { ArrayWithoutCommaPipe } from './pipe/common/array-without-comma.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SearchComponent } from './component/search/search.component';
     ArticleClassifyComponent,
     ArticleDetailComponent,
     ArticleLinksComponent,
-    SearchComponent
+    SearchComponent,
+    ArrayWithoutCommaPipe
   ],
   imports: [
     BrowserModule,

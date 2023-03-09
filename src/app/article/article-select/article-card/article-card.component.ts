@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { PopularArticle } from 'src/app/types/popular.type';
 
 @Component({
   selector: 'app-article-card',
@@ -7,24 +8,17 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ArticleCardComponent implements OnInit {
   @Input('isShadow') isShadow: Boolean = false;
-
-  list = [
-    {
-      id: 0
-    },
-    {
-      id: 1
-    },
-    {
-      id: 2
-    },
-    {
-      id: 3
-    },
-    {
-      id: 4
+  @Input('popularArticle') popularArticle: PopularArticle = {
+    id: 0,
+    type: '',
+    title: '',
+    date: '',
+    tags: [],
+    author: {
+      name: '',
+      avatar: ''
     }
-  ]
+  }
 
   ngOnInit(): void {
   }

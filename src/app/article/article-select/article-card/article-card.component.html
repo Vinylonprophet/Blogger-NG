@@ -1,11 +1,14 @@
 <article class="mini-card" [ngStyle]="{'box-shadow': this.isShadow === true? '':'none'}">
-  <p style="margin-bottom: 1rem;">Article <span class="date">on July 19, 2022</span></p>
-  <h1 class="title">There is a mind map about the basic use of html</h1>
-  <p class="tags"> @font-palette-values base-palette github </p>
+  <p style="margin-bottom: 1rem;">
+    {{ popularArticle.type }}
+    <span class="date">{{ popularArticle.date }}</span>
+  </p>
+  <h1 class="title">{{ popularArticle.title }}</h1>
+  <p class="tags">@ {{ popularArticle.tags | arrayWithoutComma }}</p>
   <div class="author">
     <div class="avatar">
-      <img src="../../../../assets/icons/avatar.jpg">
+      <img [src]="popularArticle.author.avatar">
     </div>
-    <div class="name">Vinylon Prophet</div>
+    <div class="name">{{ popularArticle.author.name }}</div>
   </div>
 </article>
