@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ArticleService } from 'src/app/service/article.service';
 
 @Component({
   selector: 'app-article-introduction',
@@ -11,115 +12,10 @@ export class ArticleIntroductionComponent implements OnInit {
   totalPage: number = 0;
   pageArray: any = [];
   currentPage: number = 0;
-  perArticle: number = 1;
+  perArticle: number = 7;
+  totalArticle: number = 21
 
-  article = [
-    {
-      id: 0,
-      img: 'https://css-tricks.com/wp-content/uploads/2023/02/gradient-shadows.png',
-      tags: [
-        'box-shadow',
-        'gradients',
-        'shadow'
-      ],
-      title: 'Different Ways to Get CSS Gradient Shadows',
-      abstract: 'It\'s a question I hear asked quite often: Is it possible to create shadows from gradients instead of solid colors? There is no specific CSS property that does this (believe me, I\'ve looked) and any blog post you find about …',
-      author: {
-        name: 'Vinylon',
-        date: 'on Feb 10, 2023'
-      }
-    },
-    {
-      id: 0,
-      img: 'https://css-tricks.com/wp-content/uploads/2023/02/gradient-shadows.png',
-      tags: [
-        'box-shadow',
-        'gradients',
-        'shadow'
-      ],
-      title: 'Different Ways to Get CSS Gradient Shadows',
-      abstract: 'It\'s a question I hear asked quite often: Is it possible to create shadows from gradients instead of solid colors? There is no specific CSS property that does this (believe me, I\'ve looked) and any blog post you find about …',
-      author: {
-        name: 'Vinylon',
-        date: 'on Feb 10, 2023'
-      }
-    },
-    {
-      id: 0,
-      img: 'https://css-tricks.com/wp-content/uploads/2023/02/gradient-shadows.png',
-      tags: [
-        'box-shadow',
-        'gradients',
-        'shadow'
-      ],
-      title: 'Different Ways to Get CSS Gradient Shadows',
-      abstract: 'It\'s a question I hear asked quite often: Is it possible to create shadows from gradients instead of solid colors? There is no specific CSS property that does this (believe me, I\'ve looked) and any blog post you find about …',
-      author: {
-        name: 'Vinylon',
-        date: 'on Feb 10, 2023'
-      }
-    },
-    {
-      id: 0,
-      img: 'https://css-tricks.com/wp-content/uploads/2023/02/gradient-shadows.png',
-      tags: [
-        'box-shadow',
-        'gradients',
-        'shadow'
-      ],
-      title: 'Different Ways to Get CSS Gradient Shadows',
-      abstract: 'It\'s a question I hear asked quite often: Is it possible to create shadows from gradients instead of solid colors? There is no specific CSS property that does this (believe me, I\'ve looked) and any blog post you find about …',
-      author: {
-        name: 'Vinylon',
-        date: 'on Feb 10, 2023'
-      }
-    },
-    {
-      id: 0,
-      img: 'https://css-tricks.com/wp-content/uploads/2023/02/gradient-shadows.png',
-      tags: [
-        'box-shadow',
-        'gradients',
-        'shadow'
-      ],
-      title: 'Different Ways to Get CSS Gradient Shadows',
-      abstract: 'It\'s a question I hear asked quite often: Is it possible to create shadows from gradients instead of solid colors? There is no specific CSS property that does this (believe me, I\'ve looked) and any blog post you find about …',
-      author: {
-        name: 'Vinylon',
-        date: 'on Feb 10, 2023'
-      }
-    },
-    {
-      id: 0,
-      img: 'https://css-tricks.com/wp-content/uploads/2023/02/gradient-shadows.png',
-      tags: [
-        'box-shadow',
-        'gradients',
-        'shadow'
-      ],
-      title: 'Different Ways to Get CSS Gradient Shadows',
-      abstract: 'It\'s a question I hear asked quite often: Is it possible to create shadows from gradients instead of solid colors? There is no specific CSS property that does this (believe me, I\'ve looked) and any blog post you find about …',
-      author: {
-        name: 'Vinylon',
-        date: 'on Feb 10, 2023'
-      }
-    },
-    {
-      id: 0,
-      img: 'https://css-tricks.com/wp-content/uploads/2023/02/gradient-shadows.png',
-      tags: [
-        'box-shadow',
-        'gradients',
-        'shadow'
-      ],
-      title: 'Different Ways to Get CSS Gradient Shadows',
-      abstract: 'It\'s a question I hear asked quite often: Is it possible to create shadows from gradients instead of solid colors? There is no specific CSS property that does this (believe me, I\'ve looked) and any blog post you find about …',
-      author: {
-        name: 'Vinylon',
-        date: 'on Feb 10, 2023'
-      }
-    }
-  ]
+  article: any = []
 
   shortArticle = [
     {},
@@ -129,13 +25,23 @@ export class ArticleIntroductionComponent implements OnInit {
     {},
   ]
 
+  constructor(private articleService: ArticleService) { }
+
   ngOnInit(): void {
-    this.currentArticle = this.article.length % this.perArticle;
-    this.totalPage = Math.ceil(this.article.length / this.perArticle);
+    this.articleService.getPopularIntroduction().subscribe(article => {
+      this.article = article;
+    }
+    )
+    this.currentArticle = this.totalArticle % this.perArticle;
+    this.totalPage = Math.ceil(this.totalArticle / this.perArticle);
     this.pageArray = Array.from(Array(this.totalPage).keys());
   }
 
   updatePage(page: number) {
     this.currentPage = page;
+    console.log("mba: " + this.currentPage);
+    this.articleService.getPopularIntroduction1().subscribe(article => {
+      this.article = article;
+    })
   }
 }
