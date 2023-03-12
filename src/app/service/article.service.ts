@@ -12,11 +12,11 @@ export class ArticleService {
     return this.http.get('http://localhost:7878/popularArticle');
   }
 
-  getPopularIntroduction() {
+  getIntroduction() {
     return this.http.get('http://localhost:7878/articleIntroduction');
   }
 
-  getPopularIntroduction1() {
+  getIntroduction1() {
     return this.http.get('http://localhost:7878/articleIntroduction1');
   }
 }

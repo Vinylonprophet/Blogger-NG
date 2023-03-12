@@ -1,7 +1,7 @@
 <div class="articles-and-sidebar">
   <div>
     <div class="article-grid">
-      <article class="article-card" *ngFor="let item of article" routerLink="/detail">
+      <article class="article-card" *ngFor="let item of article" routerLink="/detail/{{item?.id}}">
         <div class="article-thumbnail-wrap">
           <img width="1200" height="600" [src]="item?.img" class="article-thumbnail">
         </div>
@@ -15,7 +15,7 @@
           </div>
           <div class="author">
             <div class="avatar">
-              <img alt="avatar" src="../../../assets/icons/avatar.jpg">
+              <img alt="avatar" [src]="item?.author?.avatar">
             </div>
             <div style="display: flex;">
               <div class="name">{{item?.author?.name}}</div>

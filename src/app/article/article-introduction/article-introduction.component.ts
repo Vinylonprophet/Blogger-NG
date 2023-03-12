@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ArticleService } from 'src/app/service/article.service';
+import { ArticleIntroduction } from 'src/app/types/article.type';
 
 @Component({
   selector: 'app-article-introduction',
@@ -15,7 +16,7 @@ export class ArticleIntroductionComponent implements OnInit {
   perArticle: number = 7;
   totalArticle: number = 21
 
-  article: any = []
+  article: any[] = []
 
   shortArticle = [
     {},
@@ -28,7 +29,7 @@ export class ArticleIntroductionComponent implements OnInit {
   constructor(private articleService: ArticleService) { }
 
   ngOnInit(): void {
-    this.articleService.getPopularIntroduction().subscribe(article => {
+    this.articleService.getIntroduction().subscribe((article: any) => {
       this.article = article;
     }
     )
@@ -40,7 +41,7 @@ export class ArticleIntroductionComponent implements OnInit {
   updatePage(page: number) {
     this.currentPage = page;
     console.log("mba: " + this.currentPage);
-    this.articleService.getPopularIntroduction1().subscribe(article => {
+    this.articleService.getIntroduction1().subscribe((article: any) => {
       this.article = article;
     })
   }

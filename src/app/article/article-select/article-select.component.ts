@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PopularArticle } from 'src/app/types/popular.type';
 import { ArticleService } from 'src/app/service/article.service';
 
 @Component({
