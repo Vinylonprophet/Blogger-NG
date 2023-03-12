@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ArticleService } from 'src/app/service/article.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { ArticleIntroduction } from 'src/app/types/article.type';
 
 @Component({
@@ -30,8 +30,11 @@ export class ArticleIntroductionComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private articleService: ArticleService) { }
 
   ngOnInit(): void {
+    this.initPageInfo();
+  }
+
+  initPageInfo() {
     this.currentPage = Number(this.route.snapshot.paramMap.get('id'));
-    console.log("this.currentPage", this.currentPage);
     this.articleService.postIntroduction(this.currentPage).subscribe((article: any) => {
       this.article = article;
     })
@@ -41,7 +44,12 @@ export class ArticleIntroductionComponent implements OnInit {
   }
 
   updatePage(page: number) {
-    document.location.href = 'http://localhost:4200/article/' + page;
-    // this.router.navigate(['article/' + this.currentPage]);
+    // document.location.href = 'http://localhost:4200/article/' + page;
+    this.router.navigate(['article/' + page]);
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.initPageInfo();
+      }
+    });
   }
 }
