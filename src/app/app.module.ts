@@ -44,7 +44,7 @@ import { ArrayWithoutCommaPipe } from './pipe/common/array-without-comma.pipe';
     AppRoutingModule,
     RouterModule.forRoot([
       { path: 'home', component: HomeIndexComponent },
-      { path: 'article', component: ArticleComponent },
+      { path: 'article/:id', component: ArticleComponent },
       { path: 'detail/:id', component: ArticleDetailComponent },
       { path: '', redirectTo: '/home', pathMatch: 'full' },
     ]),

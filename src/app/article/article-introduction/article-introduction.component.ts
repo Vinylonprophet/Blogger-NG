@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ArticleService } from 'src/app/service/article.service';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ArticleIntroduction } from 'src/app/types/article.type';
 
 @Component({
@@ -26,10 +27,12 @@ export class ArticleIntroductionComponent implements OnInit {
     {},
   ]
 
-  constructor(private articleService: ArticleService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private articleService: ArticleService) { }
 
   ngOnInit(): void {
-    this.articleService.getIntroduction().subscribe((article: any) => {
+    this.currentPage = Number(this.route.snapshot.paramMap.get('id'));
+    console.log("this.currentPage", this.currentPage);
+    this.articleService.postIntroduction(this.currentPage).subscribe((article: any) => {
       this.article = article;
     })
     this.currentArticle = this.totalArticle % this.perArticle;
@@ -38,10 +41,7 @@ export class ArticleIntroductionComponent implements OnInit {
   }
 
   updatePage(page: number) {
-    this.currentPage = page;
-    console.log("mba: " + this.currentPage);
-    this.articleService.getIntroduction1().subscribe((article: any) => {
-      this.article = article;
-    })
+    document.location.href = 'http://localhost:4200/article/' + page;
+    // this.router.navigate(['article/' + this.currentPage]);
   }
 }

@@ -16,6 +16,11 @@ export class ArticleService {
     return this.http.get('http://localhost:7878/articleIntroduction');
   }
 
+  postIntroduction(pageId: number) {
+    console.log("-- Vinylon -- 进http --");
+    return this.http.post('http://localhost:7878/articleIntroduction/', { "pageId": pageId });
+  }
+
   getIntroduction1() {
     return this.http.get('http://localhost:7878/articleIntroduction1');
   }
