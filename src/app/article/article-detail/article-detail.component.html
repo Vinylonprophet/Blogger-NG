@@ -5,7 +5,7 @@
         <div>
           <div class="markdown-label" *ngFor="let item of article?.tags">{{item}}</div>
         </div>
-        <div class="markdown-title">You-Dont-Know-JS-作用域</div>
+        <div class="markdown-title">{{article?.title}}</div>
         <div class="author">
           <div class="avatar">
             <img alt="avatar" [src]="article?.author?.avatar" alt="avatar">

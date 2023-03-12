@@ -31,8 +31,7 @@ export class ArticleIntroductionComponent implements OnInit {
   ngOnInit(): void {
     this.articleService.getIntroduction().subscribe((article: any) => {
       this.article = article;
-    }
-    )
+    })
     this.currentArticle = this.totalArticle % this.perArticle;
     this.totalPage = Math.ceil(this.totalArticle / this.perArticle);
     this.pageArray = Array.from(Array(this.totalPage).keys());

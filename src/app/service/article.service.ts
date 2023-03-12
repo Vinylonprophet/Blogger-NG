@@ -19,4 +19,8 @@ export class ArticleService {
   getIntroduction1() {
     return this.http.get('http://localhost:7878/articleIntroduction1');
   }
+
+  getArticleDetail(id: number) {
+    return this.http.get('http://localhost:7878/articleDetail/' + id);
+  }
 }
