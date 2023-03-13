@@ -8,6 +8,10 @@ export class ArticleService {
 
   constructor(private http: HttpClient) { }
 
+  getBasicInfo() {
+    return this.http.get('http://localhost:7878/basicInfo');
+  }
+
   getPopularArticle() {
     return this.http.get('http://localhost:7878/popularArticle');
   }
@@ -16,9 +20,9 @@ export class ArticleService {
     return this.http.get('http://localhost:7878/articleIntroduction');
   }
 
-  postIntroduction(pageId: number) {
+  postIntroduction(pageId: number, part: string) {
     console.log("-- Vinylon -- 进http --");
-    return this.http.post('http://localhost:7878/articleIntroduction/', { "pageId": pageId });
+    return this.http.post('http://localhost:7878/articleIntroduction/', { "pageId": pageId, "part": part });
   }
 
   getIntroduction1() {

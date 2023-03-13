@@ -1,7 +1,7 @@
 <div class="site-header">
   <div class="site-name" routerLink="">Vinylon's blog</div>
   <ul class="site-classify">
-    <li class="classify-main" routerLink="/{{ title.main | lowercase }}" *ngFor="let title of navContent">
+    <li class="classify-main" routerLink="/{{ title.main | lowercase }}/0" *ngFor="let title of navContent">
       <a [href]="title?.link" *ngIf="title?.link" target="_blank">
         {{ title.main }}
       </a>

@@ -37,7 +37,7 @@ import { ArrayWithoutCommaPipe } from './pipe/common/array-without-comma.pipe';
     ArticleDetailComponent,
     ArticleLinksComponent,
     SearchComponent,
-    ArrayWithoutCommaPipe
+    ArrayWithoutCommaPipe,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +45,7 @@ import { ArrayWithoutCommaPipe } from './pipe/common/array-without-comma.pipe';
     RouterModule.forRoot([
       { path: 'home', component: HomeIndexComponent },
       { path: 'article/:id', component: ArticleComponent },
+      { path: 'video/:id', component: ArticleComponent },
       { path: 'detail/:id', component: ArticleDetailComponent },
       { path: '', redirectTo: '/home', pathMatch: 'full' },
     ]),

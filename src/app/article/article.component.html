@@ -1,5 +1,5 @@
 <div class="wrap">
-  <div class="title">ARTICLES</div>
+  <div class="title">{{currentPart | uppercase}}</div>
   <app-article-classify></app-article-classify>
-  <app-article-introduction></app-article-introduction>
+  <app-article-introduction [currentPart] = "currentPart"></app-article-introduction>
 </div>

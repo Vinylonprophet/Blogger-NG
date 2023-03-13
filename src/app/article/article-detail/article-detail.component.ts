@@ -24,7 +24,7 @@ export class ArticleDetailComponent implements OnInit {
       date: '',
       avatar: ''
     },
-    markdown: ''
+    link: ''
   }
 
   constructor(private route: ActivatedRoute, private router: Router, private articleService: ArticleService) { }
@@ -34,6 +34,7 @@ export class ArticleDetailComponent implements OnInit {
     console.log("needddd: ", this.articleId);
     this.articleService.getArticleDetail(this.articleId).subscribe((article: any) => {
       this.article = article;
+      console.log("cancan: link", this.article.link)
     })
   }
 }
