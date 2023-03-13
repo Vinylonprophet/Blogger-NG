@@ -29,7 +29,9 @@
       </article>
     </div>
     <button class="button" *ngIf=this.isHomePage routerLink="/article/0">Keep browser more articles</button>
-    <app-paginator class="paginator" (previous)="updatePage($event)" (next)="updatePage($event)" (navTo)="updatePage($event)" [totalPage]="this.totalPage" [pageArray]="this.pageArray" [currentPage]="this.currentPage" *ngIf=!this.isHomePage></app-paginator>
+    <app-paginator class="paginator" (previous)="updatePage($event)" (next)="updatePage($event)"
+      (navTo)="updatePage($event)" [totalPage]="this.totalPage" [pageArray]="this.pageArray"
+      [currentPage]="this.currentPage" *ngIf=!this.isHomePage></app-paginator>
   </div>
   <app-article-links></app-article-links>
 </div>

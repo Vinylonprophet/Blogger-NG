@@ -18,8 +18,10 @@ export interface PopularArticle {
   "title": string,
   "date": string,
   "tags": [],
-  "author": {
-    "name": string,
-    "avatar": string
-  }
+  "author": author
+}
+
+export interface author {
+  "name": string,
+  "avatar": string
 }
