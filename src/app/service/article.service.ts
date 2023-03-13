@@ -21,7 +21,6 @@ export class ArticleService {
   }
 
   postIntroduction(pageId: number, part: string) {
-    console.log("-- Vinylon -- 进http --");
     return this.http.post('http://localhost:7878/articleIntroduction/', { "pageId": pageId, "part": part });
   }
 

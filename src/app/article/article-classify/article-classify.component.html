@@ -1,7 +1,7 @@
 <div class="classify">
   <form style="display: flex; justify-content: space-between;">
-    <select class="classify-selector">
-      <option value="" *ngFor="let item of classify">{{item}}</option>
+    <select class="classify-selector" #selectTags>
+      <option value="{{item}}" *ngFor="let item of classify">{{item}}</option>
     </select>
   </form>
 
@@ -14,12 +14,13 @@
     </div>
   </div>
 
-  <form class="classify-sort" *ngIf="isSort">
+  <form class="classify-sort" [ngStyle]="{display: isSort ? 'flex' : 'none'}">
     <div style="margin-right: 1rem; font-weight: 700; font-size: 16px;">
       Date&nbsp;:
     </div>
-    <select class="sort-selector">
-      <option  value="" *ngFor="let item of sorting">{{item}}</option>
+    <select class="sort-selector" #selectSort>
+      <option value="{{item}}" *ngFor="let item of sorting">{{item}}</option>
     </select>
   </form>
+
 </div>
