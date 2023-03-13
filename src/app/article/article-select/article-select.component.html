@@ -12,7 +12,7 @@
     </div>
     <div class="mini-card-grid">
       <app-article-card *ngFor="let popularArticle of popularArticles; let isfirst= first;" [popularArticle]="popularArticle"
-        [isShadow]="!isfirst"></app-article-card>
+        [isShadow]="!isfirst" routerLink="/detail/{{popularArticle?.id}}"></app-article-card>
     </div>
   </section>
 </div>

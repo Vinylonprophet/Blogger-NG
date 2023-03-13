@@ -46,6 +46,7 @@ import { ArrayWithoutCommaPipe } from './pipe/common/array-without-comma.pipe';
       { path: 'home', component: HomeIndexComponent },
       { path: 'article/:id', component: ArticleComponent },
       { path: 'video/:id', component: ArticleComponent },
+      { path: 'project/:id', component: ArticleComponent },
       { path: 'detail/:id', component: ArticleDetailComponent },
       { path: '', redirectTo: '/home', pathMatch: 'full' },
     ]),

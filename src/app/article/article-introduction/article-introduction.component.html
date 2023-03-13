@@ -22,8 +22,8 @@
               <div class="date">{{"on " + item?.author?.date}}</div>
             </div>
           </div>
-          <div class="author" *ngIf="currentPart === 'video'">
-            <a [href]="item.link" target="_blank" class="video-button">Watch the Video</a>
+          <div class="author" *ngIf="currentPart === 'video' || currentPart === 'project'">
+            <a [href]="item.link" target="_blank" class="video-button">Watch the {{ currentPart }}</a>
           </div>
         </div>
       </article>
