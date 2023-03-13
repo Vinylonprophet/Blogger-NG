@@ -31,10 +31,8 @@ export class ArticleDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.articleId = Number(this.route.snapshot.paramMap.get('id'));
-    console.log("needddd: ", this.articleId);
     this.articleService.getArticleDetail(this.articleId).subscribe((article: any) => {
       this.article = article;
-      console.log("cancan: link", this.article.link)
     })
   }
 }
